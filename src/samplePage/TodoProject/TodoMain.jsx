@@ -6,6 +6,17 @@ import { useState } from "react";
 export const TodoMain = () => {
   const [tasks, setTasks] = useState(todoData);
 
+  //   const handleAddTask = (text) => {
+  //     setTasks([
+  //       ...tasks,
+  //       {
+  //         id: tasks.length++,
+  //         text: text,
+  //         done: false,
+  //       },
+  //     ]);
+  //   };
+
   const handleAddTask = (text) => {
     setTasks([
       ...tasks,
@@ -16,6 +27,17 @@ export const TodoMain = () => {
       },
     ]);
   };
+
+  //   const handleChangeTask = (task) => {
+  //     setTasks(tasks.map((t) => {
+  //         if (t.id === task.id) {
+  //           return task;
+  //         } else {
+  //           return t;
+  //         }
+  //       })
+  //     );
+  //   };
 
   const handleChangeTask = (task) => {
     setTasks(
@@ -28,6 +50,10 @@ export const TodoMain = () => {
       })
     );
   };
+
+  //   const handleDeleteTask = (taskId) => {
+  //     setTasks(tasks.filter((t) => t.id !== taskId));
+  //   };
 
   const handleDeleteTask = (taskId) => {
     setTasks(tasks.filter((t) => t.id !== taskId));
